@@ -1,0 +1,114 @@
+/* 1. Importação de Fontes Divertidas */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Caveat:wght@700&family=Nunito:wght@400;700&display=swap');
+
+/* 2. Estilo Geral da Página */
+body {
+    background-color: #FF1493; /* Rosa Choque */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente */
+    text-align: center;
+    font-family: 'Caveat', cursive; /* Fonte escrita à mão para os textos */
+    font-size: 1.6rem;
+    overflow-x: hidden; /* Evita barras de rolagem estranhas no celular */
+}
+
+/* 3. Título Principal */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2.2rem, 8vw, 4rem);
+    color: #FFFFFF;
+    text-shadow: 4px 4px 0px #C71585;
+    margin-bottom: 30px;
+}
+
+/* 4. Estilo das Fotos (Moldura de Quadro) */
+img {
+    max-width: 90%; /* Responsividade total */
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border: 12px solid #FFFFFF; /* Moldura branca */
+    outline: 4px solid #FFEB3B;  /* Linha externa amarela */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+/* 5. Parágrafos de Texto */
+p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.4;
+}
+
+/* 6. Seção do Bolo e Velas (Centralização) */
+#bolo-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante centralização das velas e do bolo */
+    justify-content: center;
+}
+
+.velas-grid {
+    display: flex;
+    flex-wrap: wrap;       /* Faz as velas dobrarem de linha se faltar espaço */
+    justify-content: center; 
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.vela {
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none; /* Evita selecionar o emoji no clique */
+    -webkit-tap-highlight-color: transparent; /* Remove brilho de clique no celular */
+    transition: transform 0.2s ease;
+}
+
+.vela:active {
+    transform: scale(1.3);
+}
+
+/* 7. Botão Voltar */
+a {
+    display: inline-block;
+    background-color: #FFEB3B;
+    color: #C71585;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 6px 0px #C71585;
+    margin: 40px 0;
+    transition: all 0.2s ease;
+}
+
+a:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0px #C71585;
+}
+
+/* 8. Ajustes para Telas Pequenas (Celular) */
+@media (max-width: 600px) {
+    img {
+        border-width: 8px;
+    }
+    .vela {
+        font-size: 2rem; /* Velas um pouco menores no celular para caberem melhor */
+    }
+}

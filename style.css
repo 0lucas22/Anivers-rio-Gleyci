@@ -1,0 +1,68 @@
+/* Importando uma fonte divertida do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700&display=swap');
+
+body {
+    background-color: #FF1493; /* Rosa Choque (Deep Pink) */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita rolagem horizontal em celulares */
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 0px #C71585; /* Sombra rosa mais escura para contraste */
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Fonte aumenta/diminui conforme a tela */
+    margin-bottom: 30px;
+}
+
+/* Transformando o Link em Botão */
+a {
+    display: inline-block;
+    padding: 18px 40px;
+    background-color: #FFEB3B; /* Amarelo vibrante para contrastar com o rosa */
+    color: #C71585; /* Texto em tom de rosa escuro */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 8px 0px #C71585; /* Efeito 3D no botão */
+    transition: all 0.2s ease;
+    margin-bottom: 40px;
+}
+
+a:active {
+    transform: translateY(4px); /* Botão "afunda" ao clicar */
+    box-shadow: 0 4px 0px #C71585;
+}
+
+/* Imagem Centralizada com Borda de Quadro */
+img {
+    max-width: 100%; /* Garante que caiba no celular */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 15px solid #FFFFFF; /* Borda de quadro branca */
+    outline: 5px solid #FFEB3B;  /* Moldura externa amarela */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-radius: 4px; /* Cantos levemente arredondados para o quadro */
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    img {
+        border-width: 10px; /* Borda um pouco menor em telas pequenas */
+    }
+}
